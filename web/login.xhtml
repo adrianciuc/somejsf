@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        template="template.xhtml">
+    <ui:define name="content">
+        <h:form>
+            Your name:
+            <h:inputText id="username"
+                         value="#{loginBean.userName}" required="true"/>
+            Your password:
+            <h:inputText id="password"
+                         value="#{loginBean.password}" required="true"/>
+            You are admin
+            <h:selectBooleanCheckbox id="adminCheckBox"
+                                     value="#{loginBean.isAdmin}" />
+            <h:commandButton id="submit"
+                             value="Submit"
+                             action="#{loginController.login(loginBean, authenticationBean)}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
