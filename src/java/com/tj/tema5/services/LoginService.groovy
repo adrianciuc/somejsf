@@ -1,21 +1,25 @@
 package com.tj.tema5.services
 
 import com.tj.tema5.beans.LoginBean
-import com.tj.tema5.dao.UserRepository
+import com.tj.tema5.dao.AdminRepository
+import com.tj.tema5.dao.PersonRepository
+import com.tj.tema5.dao.StudentRepository
 import com.tj.tema5.model.Person
 
-import javax.faces.bean.ApplicationScoped
-import javax.faces.bean.ManagedBean
-import javax.faces.bean.ManagedProperty
+import java.sql.Connection
 
-@ManagedBean(eager = true)
-@ApplicationScoped
 class LoginService {
+    List<PersonRepository<Person>> usersRepositories
 
-    @ManagedProperty(value = "#{userRepository}")
-    UserRepository userRepository
+    LoginService() {
+        usersRepositories = new ArrayList<>()
+        usersRepositories.add(new StudentRepository())
+        usersRepositories.add(new AdminRepository())
+    }
 
-    public Optional<Person> get(LoginBean loginBean) {
-        return Optional.of(userRepository.exists(loginBean.userName, loginBean.password))
+    public Optional<Person> get(LoginBean loginBean, Connection connection) {
+         usersRepositories.collect {
+             it.get loginBean.userName, loginBean.password, connection
+         } find()
     }
 }

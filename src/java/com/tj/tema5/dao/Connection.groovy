@@ -1,16 +1,20 @@
 package com.tj.tema5.dao
 
-import javax.faces.bean.ApplicationScoped
 import javax.faces.bean.ManagedBean
-import javax.faces.bean.ManagedProperty
+import javax.faces.bean.RequestScoped
 
-@ManagedBean(eager = true)
-@ApplicationScoped
+import static com.tj.tema5.dao.DataSource.DATA_SOURCE
+
+@ManagedBean
+@RequestScoped
 class Connection {
-    @ManagedProperty(value = "#{dataSource}")
-    DataSource dataSource
+
+    java.sql.Connection connection
 
     java.sql.Connection getConnection() {
-        dataSource.dataSource.connection
+        if (!connection) {
+            connection = DATA_SOURCE.connection
+        }
+        connection
     }
 }

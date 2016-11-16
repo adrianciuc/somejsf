@@ -14,8 +14,8 @@
     <schema id="4" parent="1" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-state-number>634</introspection-state-number>
-      <introspection-timestamp>2016-11-15.17:13:26.827</introspection-timestamp>
+      <introspection-state-number>636</introspection-state-number>
+      <introspection-timestamp>2016-11-16.11:03:59.146</introspection-timestamp>
     </schema>
     <schema id="5" parent="1" name="pg_catalog">
       <object-id>11</object-id>
@@ -208,9 +208,8 @@
       <data-type>varchar(50)|0</data-type>
     </column>
     <column id="45" parent="19" name="chosen_school_id">
-      <state-number>632</state-number>
+      <state-number>636</state-number>
       <data-type>integer|0</data-type>
-      <default-expression>nextval(&apos;students_school_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="46" parent="19" name="elected_school_id">
       <state-number>633</state-number>
