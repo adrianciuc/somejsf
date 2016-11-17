@@ -4,19 +4,29 @@
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
         template="template.xhtml">
     <ui:define name="content">
-        <h:form>
-            Your name:
-            <h:inputText id="username"
-                         value="#{loginBean.userName}" required="true"/>
-            Your password:
-            <h:inputText id="password"
-                         value="#{loginBean.password}" required="true"/>
-            You are admin
-            <h:selectBooleanCheckbox id="adminCheckBox"
-                                     value="#{loginBean.isAdmin}" />
-            <h:commandButton id="submit"
-                             value="Submit"
-                             action="#{loginController.login(loginBean, authenticationBean)}"/>
-        </h:form>
+        <div id="login-form-container">
+            <div id="login-form-center-container">
+                <h:form>
+                    <div class="form-group">
+                        <h:outputLabel for="username" value="Username:"/>
+                        <h:inputText id="username"
+                                     value="#{loginBean.userName}"
+                                     required="true"
+                                     styleClass="form-control input-login"/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel for="password" value="Password:"/>
+                        <h:inputText id="password"
+                                     value="#{loginBean.password}"
+                                     required="true"
+                                     styleClass="form-control input-login"/>
+                    </div>
+                    <h:commandButton id="submit"
+                                     value="Submit"
+                                     action="#{loginController.login(loginBean, authenticationBean)}"
+                                     styleClass="btn btn-default"/>
+                </h:form>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>

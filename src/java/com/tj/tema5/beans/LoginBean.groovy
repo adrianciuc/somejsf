@@ -8,6 +8,4 @@ import javax.faces.bean.RequestScoped
 class LoginBean {
     String userName
     String password
-    Boolean isAdmin
-    Boolean isSuccess
 }

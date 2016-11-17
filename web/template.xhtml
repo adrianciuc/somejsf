@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-        template="abstrct_template.xhtml">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="abstrct_template.xhtml">
     <ui:define name="top">
-        <h2>High School Application</h2>
+        <h2 id="h2-top">High School Application</h2>
+        <h:form rendered="#{not empty authenticationBean.userName}">
+            <h:commandButton action="#{loginController.logout()}"
+                             value="Logout"/>
+        </h:form>
     </ui:define>
     <ui:define name="botton">
-        <h2>Thank you for using our application</h2>
+        <h2 id="h2-bottom">Thank you for using our application</h2>
     </ui:define>
 </ui:composition>

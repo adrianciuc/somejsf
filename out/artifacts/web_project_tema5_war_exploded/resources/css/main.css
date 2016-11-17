@@ -1,0 +1,42 @@
+#h2-top {
+    margin: auto;
+    width: 25%;
+    color: white;
+}
+
+#top {
+    width: 100%;
+    background-color: darkslategray;
+    margin-bottom: 5%;
+}
+
+#h2-bottom {
+    margin: auto;
+    width: 35%;
+    color: white;
+}
+
+#bottom {
+    width: 100%;
+    background-color: darkslategray;
+    margin-top: 5%;
+    position:fixed;
+    left:0;
+    bottom:0;
+    height:30px;
+}
+
+#login-form-container {
+    width: 100%;
+    clear: both;
+}
+
+#login-form-center-container {
+    margin: auto;
+    width: 30%;
+}
+
+.input-login {
+    width: 100%;
+    clear: both;
+}

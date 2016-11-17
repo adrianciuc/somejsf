@@ -8,4 +8,5 @@ import javax.faces.bean.SessionScoped
 @SessionScoped
 class AuthenticationBean {
     String userName
+    Boolean isAdmin
 }

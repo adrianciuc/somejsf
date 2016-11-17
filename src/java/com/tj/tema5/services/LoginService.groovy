@@ -20,6 +20,8 @@ class LoginService {
     public Optional<Person> get(LoginBean loginBean, Connection connection) {
          usersRepositories.collect {
              it.get loginBean.userName, loginBean.password, connection
-         } find()
+         } find {
+             it.isPresent()
+         }
     }
 }
