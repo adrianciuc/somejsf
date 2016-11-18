@@ -8,6 +8,9 @@
     width: 100%;
     background-color: darkslategray;
     margin-bottom: 5%;
+    display: inline-flex;
+    align-items: center;
+    padding: 1%;
 }
 
 #h2-bottom {
@@ -23,7 +26,8 @@
     position:fixed;
     left:0;
     bottom:0;
-    height:30px;
+    height:50px;
+    padding: 10px;
 }
 
 #login-form-container {
@@ -39,4 +43,14 @@
 .input-login {
     width: 100%;
     clear: both;
+}
+
+#user-name-info {
+    color: white;
+    padding-right: 1%;
+    margin: 0;
+}
+
+#logout-button {
+    background-color: #0e3232;
 }

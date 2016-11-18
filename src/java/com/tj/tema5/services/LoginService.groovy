@@ -17,11 +17,9 @@ class LoginService {
         usersRepositories.add(new AdminRepository())
     }
 
-    public Optional<Person> get(LoginBean loginBean, Connection connection) {
+    public Person get(LoginBean loginBean, Connection connection) {
          usersRepositories.collect {
              it.get loginBean.userName, loginBean.password, connection
-         } find {
-             it.isPresent()
-         }
+         } find()
     }
 }

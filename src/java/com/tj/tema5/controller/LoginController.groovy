@@ -11,6 +11,8 @@ import javax.faces.bean.ManagedProperty
 import javax.faces.bean.RequestScoped
 import javax.faces.context.FacesContext
 
+import static java.util.Optional.ofNullable
+
 @ManagedBean(eager = true)
 @RequestScoped
 class LoginController {
@@ -23,8 +25,9 @@ class LoginController {
     }
 
     public String login(LoginBean person, AuthenticationBean authenticationBean) {
-        loginService.get person, connection.connection map {
+        ofNullable(loginService.get(person, connection.connection)) map {
                     authenticationBean.userName = it.userName
+                    authenticationBean.name = it.name
                     authenticationBean.isAdmin = it instanceof Admin
                     "home"
         } orElse "login"

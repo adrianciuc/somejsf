@@ -5,10 +5,18 @@
                 template="abstrct_template.xhtml">
     <ui:define name="top">
         <h2 id="h2-top">High School Application</h2>
-        <h:form rendered="#{not empty authenticationBean.userName}">
-            <h:commandButton action="#{loginController.logout()}"
-                             value="Logout"/>
-        </h:form>
+        <h3 id="user-name-info">
+            <h:outputText value="#{authenticationBean.name}"
+                          rendered="#{not empty authenticationBean.userName}"/>
+        </h3>
+        <div>
+            <h:form rendered="#{not empty authenticationBean.userName}">
+                <h:commandButton id="logout-button"
+                                 action="#{loginController.logout()}"
+                                 value="Logout"
+                                 styleClass="btn btn-primary"/>
+            </h:form>
+        </div>
     </ui:define>
     <ui:define name="botton">
         <h2 id="h2-bottom">Thank you for using our application</h2>

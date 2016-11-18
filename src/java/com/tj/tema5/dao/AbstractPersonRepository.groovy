@@ -15,16 +15,14 @@ abstract class AbstractPersonRepository<T extends Person> implements PersonRepos
 
     protected abstract T getEntity(ResultSet resultSet)
 
-    Optional<Person> get(String userName, String password, Connection connection) {
+    Person get(String userName, String password, Connection connection) {
         PreparedStatement statement = connection
                 .prepareStatement("SELECT * FROM " + getTableName() + " WHERE username = ? AND password = ?")
         statement.setString(1, userName)
         statement.setString(2, password)
         ResultSet resultSet = statement.executeQuery()
         if (resultSet.next()) {
-            of(getEntity(resultSet))
-        } else {
-            empty()
+            getEntity(resultSet)
         }
     }
 }
