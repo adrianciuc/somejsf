@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/java/com/tj/tema5/dao/AbstractPersonRepository.groovy" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/src/java/com/tj/tema5/dao/AdminRepository.groovy" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/src/java/com/tj/tema5/dao/StudentRepository.groovy" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/java/com/tj/tema5/dao/school/DefaultSchoolRepository.groovy" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/AbstractPersonRepository.groovy" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/DefaultAdminRepository.groovy" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/DefaultStudentRepository.groovy" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/resources/sql/inserts.sql" dialect="PostgreSQL" />
   </component>
 </project>

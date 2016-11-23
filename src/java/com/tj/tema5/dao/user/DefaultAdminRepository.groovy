@@ -1,10 +1,10 @@
-package com.tj.tema5.dao
+package com.tj.tema5.dao.user
 
 import com.tj.tema5.model.Admin
 
 import java.sql.ResultSet
 
-class AdminRepository extends AbstractPersonRepository<Admin> {
+class DefaultAdminRepository extends AbstractPersonRepository<Admin> {
 
     @Override
     protected String getTableName() {

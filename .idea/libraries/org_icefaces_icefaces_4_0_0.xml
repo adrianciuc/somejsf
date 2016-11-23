@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="org.icefaces:icefaces:4.0.0" type="repository">
+    <properties maven-id="org.icefaces:icefaces:4.0.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/icefaces/icefaces/4.0.0/icefaces-4.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/javax.faces/2.2.7/javax.faces-2.2.7.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/portlet/portlet-api/2.0/portlet-api-2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/icepush/icepush/4.0.0/icepush-4.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/mail/mail/1.4.1/mail-1.4.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/el/javax.el-api/2.2.1/javax.el-api-2.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

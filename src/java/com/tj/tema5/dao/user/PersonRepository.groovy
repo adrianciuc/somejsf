@@ -1,4 +1,4 @@
-package com.tj.tema5.dao
+package com.tj.tema5.dao.user
 
 import java.sql.Connection
 

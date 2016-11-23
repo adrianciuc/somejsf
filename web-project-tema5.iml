@@ -23,8 +23,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Mojarra-2.2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M10" level="application_server_libraries" />
-    <orderEntry type="library" name="IceFaces-3.1.0" level="project" />
     <orderEntry type="library" name="groovy-2.4.7" level="application" />
     <orderEntry type="library" name="postgresql-9.4.1211.jre6" level="application" />
+    <orderEntry type="library" name="org.icefaces:icefaces:4.0.0" level="project" />
+    <orderEntry type="library" name="org.icepush:icepush:4.0.0" level="project" />
+    <orderEntry type="library" name="org.icefaces:icefaces-ace:4.0.0" level="project" />
   </component>
 </module>

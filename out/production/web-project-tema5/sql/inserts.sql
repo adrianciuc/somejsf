@@ -3,3 +3,6 @@ INSERT INTO students (name, grade, identification_number, username, password)
 
 INSERT INTO admins (name, username, password)
   VALUES ('Admin', 'admin', '123');
+
+INSERT INTO schools (name)
+VALUES ('Scoala Nr. 1');

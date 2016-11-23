@@ -8,9 +8,12 @@
           <element id="module-output" name="web-project-tema5" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Mojarra-2.2.1" />
           <element id="library" level="application" name="groovy-2.4.7" />
           <element id="library" level="application" name="postgresql-9.4.1211.jre6" />
+          <element id="library" level="project" name="Mojarra-2.2.1" />
+          <element id="library" level="project" name="org.icefaces:icefaces-ace:4.0.0" />
+          <element id="library" level="project" name="org.icefaces:icefaces:4.0.0" />
+          <element id="library" level="project" name="org.icepush:icepush:4.0.0" />
         </element>
       </element>
     </root>

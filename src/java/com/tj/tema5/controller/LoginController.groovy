@@ -1,9 +1,10 @@
 package com.tj.tema5.controller
 
-import com.tj.tema5.beans.AuthenticationBean
-import com.tj.tema5.beans.LoginBean
+import com.tj.tema5.beans.authentication.AuthenticationBean
+import com.tj.tema5.beans.authentication.LoginBean
 import com.tj.tema5.dao.Connection
 import com.tj.tema5.model.Admin
+import com.tj.tema5.services.DefaultLoginService
 import com.tj.tema5.services.LoginService
 
 import javax.faces.bean.ManagedBean
@@ -15,26 +16,24 @@ import static java.util.Optional.ofNullable
 
 @ManagedBean(eager = true)
 @RequestScoped
-class LoginController {
+class LoginController extends AbstractController {
     LoginService loginService
-    @ManagedProperty(value = "#{connection}")
-    Connection connection
 
     LoginController() {
-        loginService = new LoginService()
+        loginService = new DefaultLoginService()
     }
 
-    public String login(LoginBean person, AuthenticationBean authenticationBean) {
+    String login(LoginBean person, AuthenticationBean authenticationBean) {
         ofNullable(loginService.get(person, connection.connection)) map {
                     authenticationBean.userName = it.userName
                     authenticationBean.name = it.name
                     authenticationBean.isAdmin = it instanceof Admin
-                    "home"
-        } orElse "login"
+                    "home?faces-redirect=true"
+        } orElse "login?faces-redirect=true"
     }
 
-    public String logout() {
+    String logout() {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-        "login"
+        "login?faces-redirect=true"
     }
 }

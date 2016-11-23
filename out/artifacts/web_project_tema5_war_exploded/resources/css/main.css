@@ -30,9 +30,14 @@
     padding: 10px;
 }
 
-#login-form-container {
+.content-container {
     width: 100%;
     clear: both;
+}
+
+.table-container {
+    margin: auto;
+    width: 50%;
 }
 
 #login-form-center-container {

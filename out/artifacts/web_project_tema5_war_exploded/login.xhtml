@@ -4,7 +4,7 @@
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
         template="template.xhtml">
     <ui:define name="content">
-        <div id="login-form-container">
+        <div class="content-container">
             <div id="login-form-center-container">
                 <h:form>
                     <div class="form-group">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="form-group">
                         <h:outputLabel for="password" value="Password:"/>
-                        <h:inputText id="password"
+                        <h:inputSecret id="password"
                                      value="#{loginBean.password}"
                                      required="true"
                                      styleClass="form-control input-login"/>

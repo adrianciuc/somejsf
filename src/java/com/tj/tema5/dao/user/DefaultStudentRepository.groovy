@@ -1,10 +1,10 @@
-package com.tj.tema5.dao
+package com.tj.tema5.dao.user
 
 import com.tj.tema5.model.Student
 
 import java.sql.ResultSet
 
-class StudentRepository extends AbstractPersonRepository<Student> {
+class DefaultStudentRepository extends AbstractPersonRepository<Student> {
 
     @Override
     protected String getTableName() {

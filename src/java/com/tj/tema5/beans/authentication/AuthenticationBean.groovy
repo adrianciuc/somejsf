@@ -1,4 +1,4 @@
-package com.tj.tema5.beans
+package com.tj.tema5.beans.authentication
 
 import javax.faces.bean.ManagedBean
 import javax.faces.bean.SessionScoped
