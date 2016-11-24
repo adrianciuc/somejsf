@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17d7807f-00b5-44a6-9c6b-17029a84a00a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/beans/school/SchoolBean.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/beans/school/SchoolValues.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/school/DefaultSchoolPreferenceRepository.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/school/SchoolPreferencesRepository.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/listeners/ApplicationListener.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/model/SchoolPreference.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/services/DefaultStudentServiceGenerator.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/services/StudentServiceGenerator.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/add_school.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_project_tema5_war_exploded/WEB-INF/classes/com/tj/tema5/model/School.class" afterPath="$PROJECT_DIR$/out/artifacts/web_project_tema5_war_exploded/WEB-INF/classes/com/tj/tema5/model/School.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web-project-tema5/com/tj/tema5/model/School.class" afterPath="$PROJECT_DIR$/out/production/web-project-tema5/com/tj/tema5/model/School.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -19,21 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_project_tema5_war_exploded/login.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/web_project_tema5_war_exploded/login.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_project_tema5_war_exploded/resources/css/main.css" afterPath="$PROJECT_DIR$/out/artifacts/web_project_tema5_war_exploded/resources/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web-project-tema5/sql/inserts.sql" afterPath="$PROJECT_DIR$/out/production/web-project-tema5/sql/inserts.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/controller/SchoolController.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/controller/SchoolController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/school/DefaultSchoolRepository.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/school/DefaultSchoolRepository.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/school/SchoolRepository.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/school/SchoolRepository.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/AbstractPersonRepository.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/AbstractPersonRepository.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/DefaultAdminRepository.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/DefaultAdminRepository.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/DefaultStudentRepository.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/DefaultStudentRepository.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/PersonRepository.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dao/user/PersonRepository.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/dto/SchoolDTO.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/dto/SchoolDTO.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/model/School.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/model/School.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/services/DefaultSchoolService.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/services/DefaultSchoolService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/tj/tema5/services/SchoolService.groovy" afterPath="$PROJECT_DIR$/src/java/com/tj/tema5/services/SchoolService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sql/inserts.sql" afterPath="$PROJECT_DIR$/src/resources/sql/inserts.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/home.xhtml" afterPath="$PROJECT_DIR$/web/home.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.xhtml" afterPath="$PROJECT_DIR$/web/login.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/css/main.css" afterPath="$PROJECT_DIR$/web/resources/css/main.css" />
     </list>
     <ignored path="web-project-tema5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1096,7 +1072,7 @@
       <workItem from="1479838517345" duration="789000" />
       <workItem from="1479842506804" duration="4059000" />
       <workItem from="1479923961736" duration="11215000" />
-      <workItem from="1480009506904" duration="13227000" />
+      <workItem from="1480009506904" duration="13301000" />
     </task>
     <task id="LOCAL-00001" summary="Remove @ManagedBean from business logic classes">
       <created>1479323378200</created>
@@ -1126,11 +1102,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479929326097</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add random generation of students and form for adding new schools">
+      <created>1480023620042</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1480023620042</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139840000" />
+    <option name="totallyTimeSpent" value="139914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1225,7 +1208,8 @@
     <MESSAGE value="Finish login/logout functionality" />
     <MESSAGE value="Add faces-redirect=true in order to navigate after login and logout and adding school data table for admin" />
     <MESSAGE value="Adding gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding gitignore file" />
+    <MESSAGE value="Add random generation of students and form for adding new schools" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add random generation of students and form for adding new schools" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
