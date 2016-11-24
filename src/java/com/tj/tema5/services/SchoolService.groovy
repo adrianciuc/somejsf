@@ -8,4 +8,6 @@ import java.sql.Connection
 interface SchoolService {
 
     List<SchoolDTO> getAllSchools(Connection connection)
+
+    void add(SchoolDTO schoolDTO, Connection connection)
 }

@@ -7,12 +7,24 @@
     <ui:define name="content">
         <div class="content-container">
             <div class="table-container">
+                <div id="add-school-form-container">
+                    <h:button rendered="#{authenticationBean.isAdmin}"
+                              value="Add"
+                              outcome="add_school?faces-redirect=true"
+                              styleClass="btn btn-primary"/>
+                </div>
                 <h:form rendered="#{authenticationBean.isAdmin}">
                     <ace:dataTable var="single"
                                    styleClass="table table-striped table-bordered"
                                    value="#{schoolController.allSchools}">
                         <ace:column headerText="Name">
                             <h:outputText value="#{single.name}"/>
+                        </ace:column>
+                        <ace:column headerText="Max number of students">
+                            <h:outputText value="#{single.maxAllowedStudents}"/>
+                        </ace:column>
+                        <ace:column headerText="Min allowed grade">
+                            <h:outputText value="#{single.minAllowedGrade}"/>
                         </ace:column>
                     </ace:dataTable>
                 </h:form>

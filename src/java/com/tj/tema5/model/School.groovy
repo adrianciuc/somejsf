@@ -2,6 +2,7 @@ package com.tj.tema5.model
 
 
 class School {
-    Long id
+    Integer id
     String name
+    SchoolPreference schoolPreferences
 }

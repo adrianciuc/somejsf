@@ -40,12 +40,12 @@
     width: 50%;
 }
 
-#login-form-center-container {
+#form-center-container {
     margin: auto;
     width: 30%;
 }
 
-.input-login {
+.input-form-text {
     width: 100%;
     clear: both;
 }

@@ -8,4 +8,6 @@ import java.sql.Connection
 interface SchoolRepository {
 
     List<School> getAll(Connection connection)
+
+    void add(School school, Connection connection)
 }

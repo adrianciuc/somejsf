@@ -6,3 +6,18 @@ INSERT INTO admins (name, username, password)
 
 INSERT INTO schools (name)
 VALUES ('Scoala Nr. 1');
+
+INSERT INTO school_preferences (max_students_allowed, min_grade_allowed, school_id)
+VALUES (20, 80, 1);
+
+INSERT INTO schools (name)
+VALUES ('Scoala Nr. 2');
+
+INSERT INTO school_preferences (max_students_allowed, min_grade_allowed, school_id)
+VALUES (100, 5, 2);
+
+INSERT INTO schools (name)
+VALUES ('Scoala Nr. 3');
+
+INSERT INTO school_preferences (max_students_allowed, min_grade_allowed, school_id)
+VALUES (50, 2, 3);
