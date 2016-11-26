@@ -24,6 +24,15 @@ class DefaultStudentRepository extends AbstractPersonRepository<Student> {
     }
 
     @Override
+    void chooseSchool(String username, Connection connection, Integer schoolId) {
+        Statement statement =
+                connection.prepareStatement("UPDATE students SET chosen_school_id = ? WHERE username = ?")
+        statement.setInt(1, schoolId)
+        statement.setString(2, username)
+        statement.executeUpdate()
+    }
+
+    @Override
     void add(List<Student> students, Connection connection) {
         students.each {
             add(it, connection)

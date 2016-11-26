@@ -58,4 +58,14 @@ class DefaultSchoolRepository implements SchoolRepository {
         }
         connection.commit()
     }
+
+    @Override
+    Integer getId(String name, Connection connection) {
+        Statement statement = connection.prepareStatement("SELECT id FROM schools WHERE name = ?")
+        statement.setString(1, name)
+        ResultSet resultSet = statement.executeQuery()
+        if (resultSet.next()) {
+            resultSet.getInt("id")
+        }
+    }
 }

@@ -8,6 +8,8 @@ interface PersonRepository<T extends Person> {
 
     T get(String userName, String password, Connection connection)
 
+    void chooseSchool(String username, Connection connection, Integer schoolId)
+
     void add(List<T> students, Connection connection)
 
     void add(T student, Connection connection)

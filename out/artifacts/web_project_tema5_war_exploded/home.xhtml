@@ -13,7 +13,7 @@
                               outcome="add_school?faces-redirect=true"
                               styleClass="btn btn-primary"/>
                 </div>
-                <h:form rendered="#{authenticationBean.isAdmin}">
+                <h:form>
                     <ace:dataTable var="single"
                                    styleClass="table table-striped table-bordered"
                                    value="#{schoolController.allSchools}">
@@ -25,6 +25,12 @@
                         </ace:column>
                         <ace:column headerText="Min allowed grade">
                             <h:outputText value="#{single.minAllowedGrade}"/>
+                        </ace:column>
+                        <ace:column headerText=""
+                                    rendered="#{not authenticationBean.isAdmin}">
+                            <h:commandButton action="#{schoolController.choose(authenticationBean, single)}"
+                                             value="Choose"
+                                             styleClass="btn btn-default"/>
                         </ace:column>
                     </ace:dataTable>
                 </h:form>

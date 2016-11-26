@@ -10,4 +10,6 @@ interface SchoolRepository {
     List<School> getAll(Connection connection)
 
     void add(School school, Connection connection)
+
+    Integer getId(String name, Connection connection)
 }
