@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+
+    <composite:interface>
+        <composite:attribute name="usernameLabel" />
+        <composite:attribute name="userNameValue" />
+        <composite:attribute name="passwordLabel" />
+        <composite:attribute name="passwordValue" />
+        <composite:attribute name="loginButtonText" />
+        <composite:attribute name="loginButtonAction"
+                             method-signature="java.lang.String
+                              login(com.tj.tema5.beans.authentication.LoginBean,
+                               com.tj.tema5.beans.authentication.AuthenticationBean)" />
+    </composite:interface>
+    <composite:implementation>
+        <h:form>
+            <div class="form-group">
+                <h:outputLabel for="username" value="#{cc.attrs.usernameLabel}"/>
+                <h:inputText id="username"
+                             value="#{cc.attrs.userNameValue}"
+                             required="true"
+                             styleClass="form-control input-form-text"/>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="password" value="#{cc.attrs.passwordLabel}"/>
+                <h:inputSecret id="password"
+                               value="#{cc.attrs.passwordValue}"
+                               required="true"
+                               styleClass="form-control input-form-text"/>
+            </div>
+            <h:commandButton id="submit"
+                             value="#{cc.attrs.loginButtonText}"
+                             action="#{cc.attrs.loginButtonAction}"
+                             styleClass="btn btn-default"/>
+        </h:form>
+    </composite:implementation>
+
+</html>

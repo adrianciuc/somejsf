@@ -23,7 +23,7 @@ class DefaultAdminRepository extends AbstractPersonRepository<Admin> {
 
     @Override
     void chooseSchool(String username, Connection connection, Integer schoolId) {
-        return null
+
     }
 
     @Override
@@ -39,5 +39,20 @@ class DefaultAdminRepository extends AbstractPersonRepository<Admin> {
     @Override
     Long count(Connection connection) {
         return null
+    }
+
+    @Override
+    List<Admin> getStudentsWhoChoosedSchool(Integer schoolId, Connection connection) {
+        return null
+    }
+
+    @Override
+    List<Admin> getUnrepartitioinedStudents(Connection connection) {
+        return null
+    }
+
+    @Override
+    void updateElectedSchools(List<Admin> persons, Connection connection) {
+
     }
 }

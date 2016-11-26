@@ -15,4 +15,10 @@ interface PersonRepository<T extends Person> {
     void add(T student, Connection connection)
 
     Long count(Connection connection)
+
+    List<T> getStudentsWhoChoosedSchool(Integer schoolId, Connection connection)
+
+    List<T> getUnrepartitioinedStudents(Connection connection)
+
+    void updateElectedSchools(List<T> persons, Connection connection)
 }

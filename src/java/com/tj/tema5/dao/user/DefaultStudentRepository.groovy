@@ -1,5 +1,6 @@
 package com.tj.tema5.dao.user
 
+import com.tj.tema5.model.School
 import com.tj.tema5.model.Student
 
 import java.sql.Connection
@@ -16,10 +17,13 @@ class DefaultStudentRepository extends AbstractPersonRepository<Student> {
     @Override
     protected Student getEntity(ResultSet resultSet) {
         return new Student(
+                id: resultSet.getInt("id"),
                 userName: resultSet.getString("username"),
                 name: resultSet.getString("name"),
                 grade: resultSet.getDouble("grade"),
-                identificationNumber: resultSet.getString("identification_number")
+                identificationNumber: resultSet.getString("identification_number"),
+                chosenSchool: new School(
+                        id: resultSet.getInt("chosen_school_id"))
         )
     }
 
@@ -68,5 +72,47 @@ class DefaultStudentRepository extends AbstractPersonRepository<Student> {
         } else {
             0
         }
+    }
+
+    @Override
+    List<Student> getStudentsWhoChoosedSchool(Integer schoolId, Connection connection) {
+        Statement statemet =
+                connection.prepareStatement("SELECT * FROM students WHERE elected_school_id = ?")
+        statemet.setInt(1, schoolId)
+        ResultSet resultSet = statemet.executeQuery()
+        List<Student> students = []
+        while (resultSet.next()) {
+            students.add(
+                    new Student(
+                            name: resultSet.getString("name"),
+                            identificationNumber: resultSet.getString("identification_number")))
+        }
+        students
+    }
+
+    @Override
+    List<Student> getUnrepartitioinedStudents(Connection connection) {
+        Statement statement = connection.prepareStatement("SELECT * FROM students WHERE elected_school_id ISNULL ")
+        ResultSet resultSet = statement.executeQuery()
+        List<Student> students = []
+        while (resultSet.next()) {
+            students.add(getEntity(resultSet))
+        }
+        students
+    }
+
+    void updateElectedSchools(List<Student> persons, Connection connection) {
+        persons.findAll {
+          it.electedSchool
+        } each {
+            updateElectedSchool(it, connection)
+        }
+    }
+
+    private void updateElectedSchool(Student student, Connection connection) {
+        Statement statement = connection.prepareStatement("UPDATE students SET elected_school_id = ? WHERE username = ?")
+        statement.setInt(1, student.electedSchool.id)
+        statement.setString(2, student.userName)
+        statement.executeUpdate()
     }
 }

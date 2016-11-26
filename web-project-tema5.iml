@@ -28,5 +28,6 @@
     <orderEntry type="library" name="org.icefaces:icefaces:4.0.0" level="project" />
     <orderEntry type="library" name="org.icepush:icepush:4.0.0" level="project" />
     <orderEntry type="library" name="org.icefaces:icefaces-ace:4.0.0" level="project" />
+    <orderEntry type="library" name="org.apache.commons:commons-collections4:4.1" level="project" />
   </component>
 </module>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ace="http://www.icefaces.org/icefaces/components"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="template.xhtml">
+    <ui:define name="content">
+        <div class="content-container">
+            <div class="table-container">
+                <div>
+                    <h:form>
+                        <h:commandButton value="Start repartition"
+                                  action="#{repartitionController.startRepartition()}"
+                                  styleClass="btn btn-default"
+                                  rendered="#{authenticationBean.isAdmin}"/>
+                    </h:form>
+                </div>
+                    <h:form>
+                        <ace:tree id="tree"
+                                  expansion="true"
+                                  selection="true"
+                                  reordering="true"
+                                  value="#{repartitionController.repartitionResult()}"
+                                  var="node"
+                                  rendered="#{authenticationBean.isAdmin}"
+                                  type="#{node.type}">
+                            <ace:node type="school">
+                                School: <h:outputText value="#{node.name}" />
+                            </ace:node>
+                            <ace:node type="student">
+                                Student: <h:outputText value="#{node.name}" />
+                            </ace:node>
+                        </ace:tree>
+                    </h:form>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

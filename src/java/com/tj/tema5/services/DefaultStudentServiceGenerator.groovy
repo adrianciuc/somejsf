@@ -27,7 +27,7 @@ class DefaultStudentServiceGenerator implements StudentServiceGenerator {
     @Override
     void generateStudents() {
         Connection connection = DATA_SOURCE.connection
-        if (studentRepository.count(connection) <= 1) {
+        if (studentRepository.count(connection) <= 10000) {
             List<School> schools = schoolRepository.getAll(connection)
             List<Student> students = getRandomStudents(schools)
             studentRepository.add(students, connection)
@@ -44,9 +44,9 @@ class DefaultStudentServiceGenerator implements StudentServiceGenerator {
                             chosenSchool: schoolList.get(random.nextInt(schoolList.size() - 1)),
                             identificationNumber: randomUUID().toString().substring(0, 12),
                             grade: round(1 + 10 * random.nextDouble() * 100)/100.0,
-                            userName: randomUUID().toString().substring(0, 4),
-                            password: randomUUID().toString().substring(0, 3),
-                            name: randomUUID().toString().substring(0, 3)))
+                            userName: randomUUID().toString().substring(0, 10),
+                            password: randomUUID().toString().substring(0, 10),
+                            name: randomUUID().toString().substring(0, 10)))
         }
         studentList
     }

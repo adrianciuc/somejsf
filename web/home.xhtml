@@ -12,6 +12,10 @@
                               value="Add"
                               outcome="add_school?faces-redirect=true"
                               styleClass="btn btn-primary"/>
+                    <h:button rendered="#{authenticationBean.isAdmin}"
+                              value="Repartition page"
+                              outcome="final_result?faces-redirect=true"
+                              styleClass="btn btn-link"/>
                 </div>
                 <h:form>
                     <ace:dataTable var="single"

@@ -7,5 +7,7 @@ import java.sql.Connection
 
 interface SchoolPreferencesRepository {
 
-    SchoolPreference getSchoolPreference(Integer id, Connection connection)
+    SchoolPreference getSchoolPreference(Integer schoolId, Connection connection)
+
+    List<SchoolPreference> getAll(Connection connection)
 }
